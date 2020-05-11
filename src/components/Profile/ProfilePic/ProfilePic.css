@@ -1,0 +1,10 @@
+.profilepic-center {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translatex(-50%);
+}
+
+.border-3 {
+  border-width: 3px !important;
+}
