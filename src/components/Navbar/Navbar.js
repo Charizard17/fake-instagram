@@ -5,10 +5,17 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top" style={{height:"50px"}}>
+        <nav
+          className="navbar navbar-expand-lg navbar-light bg-light fixed-top"
+          style={{ height: "50px" }}
+        >
           <a
             className="navbar-brand"
-            style={{marginLeft: "20%", fontSize:"25px", fontFamily: "'Shadows Into Light', cursive"}}
+            style={{
+              marginLeft: "20%",
+              fontSize: "25px",
+              fontFamily: "'Shadows Into Light', cursive",
+            }}
             href="#"
           >
             Fake Instagram
@@ -21,25 +28,27 @@ class Navbar extends Component {
               aria-label="Search"
             />
           </form>
-          <ul className="navbar-nav ml-auto" style={{marginRight: "22%"}}>
+          <ul className="navbar-nav ml-auto" style={{ marginRight: "22%" }}>
             <li className="nav-item active">
               <a className="nav-link" href="#">
-                Home <span className="sr-only">(current)</span>
+                <span
+                  className="badge badge-primary"
+                  style={{ fontSize: "17px" }}
+                >
+                  Log In
+                </span>
+                <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li className="nav-item">
+            <li className="nav-item active">
               <a className="nav-link" href="#">
-                Link
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-              >
-                Disabled
+                <span
+                  className="badge badge-light text-primary"
+                  style={{ fontSize: "17px" }}
+                >
+                  Sign Up
+                </span>
+                <span className="sr-only">(current)</span>
               </a>
             </li>
           </ul>
