@@ -5,10 +5,10 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top" style={{height:"50px"}}>
           <a
             className="navbar-brand"
-            style={{marginLeft: "20%", fontFamily: "'Satisfy', cursive"}}
+            style={{marginLeft: "20%", fontSize:"25px", fontFamily: "'Shadows Into Light', cursive"}}
             href="#"
           >
             Fake Instagram
