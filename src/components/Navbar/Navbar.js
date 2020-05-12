@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Navbar.css";
+import "./Navbar.scss";
 
 class Navbar extends Component {
   render() {
@@ -10,25 +10,23 @@ class Navbar extends Component {
           style={{ height: "50px" }}
         >
           <a
-            className="navbar-brand"
+            className="navbar-brand ml-3"
             style={{
-              marginLeft: "20%",
-              fontSize: "25px",
               fontFamily: "'Shadows Into Light', cursive",
             }}
             href="#"
           >
-            Fake Instagram
+            <h2>Fake Instagram</h2>
           </a>
           <form className="form-inline my-2 my-lg-0 navbar-center">
             <input
               className="form-control mr-sm-2"
               type="search"
-              placeholder="Search"
+              placeholder="&#x1f50d; Search"
               aria-label="Search"
             />
           </form>
-          <ul className="navbar-nav ml-auto" style={{ marginRight: "22%" }}>
+          <ul className="navbar-nav ml-auto">
             <li className="nav-item active">
               <a className="nav-link" href="#">
                 <span
@@ -52,6 +50,43 @@ class Navbar extends Component {
               </a>
             </li>
           </ul>
+
+          <select>
+            <option value="" selected="selected">
+              Select
+            </option>
+
+            <option value="/">
+              <input
+                className="form-control mr-sm-2"
+                type="search"
+                placeholder="&#x1f50d; Search"
+                aria-label="Search"
+              />
+            </option>
+            <option value="/">
+              <a className="nav-link" href="#">
+                <span
+                  className="badge badge-primary"
+                  style={{ fontSize: "17px" }}
+                >
+                  Log In
+                </span>
+                <span className="sr-only">(current)</span>
+              </a>
+            </option>
+            <option value="/">
+              <a className="nav-link" href="#">
+                <span
+                  className="badge badge-light text-primary"
+                  style={{ fontSize: "17px" }}
+                >
+                  Sign Up
+                </span>
+                <span className="sr-only">(current)</span>
+              </a>
+            </option>
+          </select>
         </nav>
       </div>
     );

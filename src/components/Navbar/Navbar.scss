@@ -1,0 +1,45 @@
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.navbar-left-custom {
+    position: absolute;
+    left: 20%;
+    transform: translatex(-50%);
+}
+
+.navbar-right-custom {
+    position: absolute;
+    right: 20%;
+    transform: translatex(-50%);
+}
+
+$spacer: 22%;
+
+.ml-3 {
+    margin-left: $spacer !important;
+}
+
+.ml-auto {
+    margin-right: $spacer !important;
+}
+
+nav select {
+    display: none;
+}
+
+@media only screen and (max-width: 640px) {
+    .ml-3 {
+        margin-left: 5px !important;
+    }
+
+    nav form, ul {
+        display: none !important;
+    }
+
+    nav select {
+        display: inline-block;
+    }
+}

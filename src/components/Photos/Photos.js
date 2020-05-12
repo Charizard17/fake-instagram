@@ -8,7 +8,7 @@ class Photos extends Component {
     for (let i = 0; i < count; i++) {
       let randomImages = faker.image.avatar();
       images.push(
-        <div className="col-sm">
+        <div className="col-sm ml-2">
           <div
             className="card border-primary mb-4"
             style={{ width: "300px", height: "300px" }}
@@ -25,7 +25,7 @@ class Photos extends Component {
     }
     return (
       <div>
-        <div className="container mt-5">
+        <div className="container mt-5 mx-auto">
           <div className="row">{images}</div>
         </div>
       </div>
