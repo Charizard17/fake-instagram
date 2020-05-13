@@ -8,14 +8,12 @@ class ProfilePic extends Component {
     return (
       <div className="d-inline-flex profilepic-center">
         <div
-          className="card border-primary border-4 mb-5 rounded-circle"
-          style={{ width: "175px", height: "175px" }}
+          className="card border-primary border-4 mb-5 rounded-circle profilepicdiv"
         >
           <img
-            className="rounded-circle m-auto profilepic-hover"
+            className="rounded-circle m-auto profilepicimg"
             src={randomPic}
             alt="profile picture"
-            style={{ width: "160px", height: "160px" }}
           />
         </div>
       </div>

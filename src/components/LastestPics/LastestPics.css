@@ -1,4 +1,20 @@
-.imghover:hover {
-    color: rgba(0, 0, 0, 1);
-    filter: brightness(90%);
+.latestimgdiv {
+    width: 200px;
+    height: 100px;
+}
+
+.latestimg {
+    width: 75px;
+    height: 75px;
+}
+
+.border-none {
+    border: none;
+}
+
+.latestimg:hover {
+    cursor: pointer;
+    filter: brightness(70%);
+    width: 77px;
+    height: 77px;
 }

@@ -11,14 +11,10 @@ class LastestPics extends Component {
       let randomText = faker.lorem.word();
       let uuid = faker.random.uuid();
       images.push(
-        <div className="col" key={uuid}>
-          <div
-            className="card border-white mb-3"
-            style={{ width: "150px", height: "100px" }}
-          >
+        <div className="col-sm" key={uuid}>
+          <div className="card border-none latestimgdiv">
             <img
-              className="rounded-circle mx-auto"
-              style={{ width: "75px", height: "75px", cursor: "pointer" }}
+              className="rounded-circle m-auto latestimg"
               src={randomImages}
               alt="random images"
             ></img>
@@ -30,9 +26,7 @@ class LastestPics extends Component {
     return (
       <div>
         <div className="container text-center">
-          <div className="row">
-            {images}
-          </div>
+          <div className="row">{images}</div>
         </div>
       </div>
     );
