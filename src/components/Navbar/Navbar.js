@@ -5,10 +5,7 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav
-          className="navbar navbar-expand-lg navbar-light bg-light fixed-top"
-          style={{ height: "50px" }}
-        >
+        <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
           <a
             className="navbar-brand ml-3"
             style={{
@@ -50,42 +47,12 @@ class Navbar extends Component {
               </a>
             </li>
           </ul>
-
           <select>
-            <option value="" selected="selected">
+            <option value="/">
               Select
             </option>
-
-            <option value="/">
-              <input
-                className="form-control mr-sm-2"
-                type="search"
-                placeholder="&#x1f50d; Search"
-                aria-label="Search"
-              />
-            </option>
-            <option value="/">
-              <a className="nav-link" href="#">
-                <span
-                  className="badge badge-primary"
-                  style={{ fontSize: "17px" }}
-                >
-                  Log In
-                </span>
-                <span className="sr-only">(current)</span>
-              </a>
-            </option>
-            <option value="/">
-              <a className="nav-link" href="#">
-                <span
-                  className="badge badge-light text-primary"
-                  style={{ fontSize: "17px" }}
-                >
-                  Sign Up
-                </span>
-                <span className="sr-only">(current)</span>
-              </a>
-            </option>
+            <option value="/login">Log In</option>
+            <option value="/signup">Sign Up</option>
           </select>
         </nav>
       </div>

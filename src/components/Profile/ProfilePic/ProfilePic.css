@@ -8,3 +8,9 @@
 .border-4 {
   border-width: 3px !important;
 }
+
+.profilepic-hover:hover {
+    color: rgba(0, 0, 0, 1);
+    filter: brightness(90%);
+    cursor: pointer;
+}

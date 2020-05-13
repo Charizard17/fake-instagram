@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import faker from "faker";
+import "./Photos.css";
 
 let count = 15;
 class Photos extends Component {
@@ -7,15 +8,14 @@ class Photos extends Component {
     let images = [];
     for (let i = 0; i < count; i++) {
       let randomImages = faker.image.avatar();
+      let uuid = faker.random.uuid();
       images.push(
-        <div className="col-sm ml-2">
+        <div className="col-sm" key={uuid}>
           <div
-            className="card border-primary mb-4"
-            style={{ width: "300px", height: "300px" }}
+            className="card border-none photos-div"
           >
             <img
-              className="m-auto"
-              style={{ width: "280px", height: "280px" }}
+              className="m-auto photos-img"
               src={randomImages}
               alt="random images"
             />
@@ -25,7 +25,7 @@ class Photos extends Component {
     }
     return (
       <div>
-        <div className="container mt-5 mx-auto">
+        <div className="container">
           <div className="row">{images}</div>
         </div>
       </div>

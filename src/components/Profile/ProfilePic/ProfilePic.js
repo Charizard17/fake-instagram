@@ -12,7 +12,7 @@ class ProfilePic extends Component {
           style={{ width: "175px", height: "175px" }}
         >
           <img
-            className="rounded-circle m-auto"
+            className="rounded-circle m-auto profilepic-hover"
             src={randomPic}
             alt="profile picture"
             style={{ width: "160px", height: "160px" }}

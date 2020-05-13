@@ -20,7 +20,7 @@ class ProfileInfos extends Component {
               <h5 className="card-title" id="cardTitle">
                 {randomName}
                 <span className="badge badge-primary ml-2 rounded-circle">✓</span>
-                <span className="badge badge-primary ml-4">Follow</span>
+                <span className="badge badge-primary ml-4" style={{cursor: "pointer"}} >Follow</span>
               </h5>
               <span className="">
                 <strong>{postNumber}</strong> posts
