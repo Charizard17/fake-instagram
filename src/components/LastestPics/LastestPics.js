@@ -1,32 +1,49 @@
 import React, { Component } from "react";
 import faker from "faker";
 import "./LastestPics.css";
+import PicsCard from "./PicsCard";
 
-let count = 3;
 class LastestPics extends Component {
-  render() {
-    let images = [];
-    for (let i = 0; i < count; i++) {
-      let randomImages = faker.image.avatar();
-      let randomText = faker.lorem.word();
-      let uuid = faker.random.uuid();
-      images.push(
-        <div className="col-sm" key={uuid}>
-          <div className="card border-none latestimgdiv">
-            <img
-              className="rounded-circle m-auto latestimg"
-              src={randomImages}
-              alt="random images"
-            ></img>
-            <span>{randomText}</span>
-          </div>
-        </div>
-      );
+  constructor(props) {
+    super(props);
+    this.state = {
+      initialData: [],
+    };
+  }
+
+  componentDidMount() {
+    let initialData = this.getDataFromFaker();
+    this.setState({ initialData });
+    console.log(initialData);
+  }
+
+  getDataFromFaker() {
+    let randomData = [];
+    for (let i = 0; i < 3; i++) {
+      randomData.push({
+        uuid: faker.random.uuid(),
+        avatar: faker.internet.avatar(),
+        word: faker.lorem.word(),
+      });
     }
+    return randomData;
+  }
+
+  render() {
     return (
       <div>
         <div className="container text-center">
-          <div className="row">{images}</div>
+          <div className="row">
+          {this.state.initialData.map((element) => {
+          return (
+            <PicsCard
+              key={element.uuid}
+              avatar={element.avatar}
+              word={element.word}
+            />
+          );
+        })}
+          </div>
         </div>
       </div>
     );
