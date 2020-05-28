@@ -1,38 +1,48 @@
 import React, { Component } from "react";
+import playstore from "./playstore.png";
+import appstore from "./appstore.png";
 
 class Login extends Component {
-    loginClick = (e) => {
-        let username = document.getElementById("username");
-        let password = document.getElementById("password");
-        e.preventDefault();
-        if (username.value === "admin" && password.value === "admin") {
-          console.log("Log In succesful!");
-          window.location.href = "/userpage";
-        } else {
-          if (username.value === "" && password.value !== "") {
-            console.log("username is mandatory!");
-            alert(
-              "If you fill inputs and click the button, it will automaticly redirect to the userpage"
-            );
-          } else if (username.value !== "" && password.value === "") {
-            console.log("Password is mandatory!");
-            alert(
-              "If you fill inputs and click the button, it will automaticly redirect to the userpage"
-            );
-          } else {
-            console.log("Phone or Email and Password cannot be empty!");
-            alert(
-              "If you fill inputs and click the button, it will automaticly redirect to the userpage"
-            );
-          }
-        }
-      };
+  loginClick = (e) => {
+    let username = document.getElementById("username");
+    let password = document.getElementById("password");
+    e.preventDefault();
+    if (username.value === "admin" && password.value === "admin") {
+      console.log("Log In succesful!");
+      window.location.href = "/userpage";
+    } else {
+      if (username.value === "" && password.value !== "") {
+        console.log("username is mandatory!");
+        alert(
+          "If you fill inputs and click the button, it will automaticly redirect to the userpage"
+        );
+      } else if (username.value !== "" && password.value === "") {
+        console.log("Password is mandatory!");
+        alert(
+          "If you fill inputs and click the button, it will automaticly redirect to the userpage"
+        );
+      } else {
+        console.log("Phone or Email and Password cannot be empty!");
+        alert(
+          "If you fill inputs and click the button, it will automaticly redirect to the userpage"
+        );
+      }
+    }
+  };
   render() {
     return (
       <div className="text-center" style={{ width: "25rem" }}>
         <div className="card" style={{ width: "25rem" }}>
           <div className="card-body">
-            <h5 className="card-title">Fake Instagram</h5>
+            <h5
+              className="card-title"
+              style={{
+                fontFamily: "'Shadows Into Light', cursive",
+                fontSize: "2.5rem"
+              }}
+            >
+              Fake Instagram
+            </h5>
             <input
               type="text"
               id="username"
@@ -49,7 +59,11 @@ class Login extends Component {
               aria-label="Password"
               aria-describedby="basic-addon1"
             />
-            <button onClick={this.loginClick} type="button" className="btn btn-primary">
+            <button
+              onClick={this.loginClick}
+              type="button"
+              className="btn btn-primary"
+            >
               Log In
             </button>
           </div>
@@ -64,9 +78,11 @@ class Login extends Component {
             </a>
           </div>
         </div>
-        <div>
-            <p>Get the app.</p>
-
+        <div className="mt-5">
+          <span>Get the app.</span>
+          <br />
+          <img src={playstore} className="img-fluid mr-3" />
+          <img src={appstore} className="img-fluid" />
         </div>
       </div>
     );
