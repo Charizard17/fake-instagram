@@ -11,7 +11,7 @@ class Navbar extends Component {
             style={{
               fontFamily: "'Shadows Into Light', cursive",
             }}
-            href="#"
+            href="/"
           >
             <h2>Fake Instagram</h2>
           </a>

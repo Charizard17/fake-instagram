@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
-import Navbar from "./components/Navbar/Navbar";
-import Profile from "./components/Profile/Profile";
-import Photos from "./components/Photos/Photos";
-import LastestPics from './components/LastestPics/LastestPics';
-
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
+import LoginPage from "./components/LoginPage/LoginPage";
+import UserPage from "./components/UserPage/UserPage";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Navbar />
-        <Profile className="mt-2" />
-        <LastestPics />
-        <div className="container"><hr /></div>
-        <Photos />
+        <Switch>
+          <Route exact path="/" component={LoginPage} />
+          <Route exact path="/userpage" component={UserPage} />
+        </Switch>
       </div>
-    )
+    );
   }
 }
 
