@@ -1,32 +1,42 @@
 import React, { Component } from "react";
 import faker from "faker";
 import "./Photos.css";
+import Photo from "./Photo";
 
-let count = 15;
 class Photos extends Component {
-  render() {
-    let images = [];
-    for (let i = 0; i < count; i++) {
-      let randomImages = faker.image.avatar();
-      let uuid = faker.random.uuid();
-      images.push(
-        <div className="col-sm" key={uuid}>
-          <div
-            className="card border-none photos-div"
-          >
-            <img
-              className="m-auto photos-img"
-              src={randomImages}
-              alt="random images"
-            />
-          </div>
-        </div>
-      );
+  constructor(props) {
+    super(props);
+    this.state = {
+      initialPhotos: [],
+    };
+  }
+
+  componentDidMount() {
+    let initialPhotos = this.getDataFromFaker();
+    this.setState({ initialPhotos });
+    console.log(initialPhotos);
+  }
+
+  getDataFromFaker() {
+    let randomData = [];
+    for (let i = 0; i < 15; i++) {
+      randomData.push({
+        uuid: faker.random.uuid(),
+        avatar: faker.internet.avatar(),
+      });
     }
+    return randomData;
+  }
+
+  render() {
     return (
       <div>
         <div className="container">
-          <div className="row">{images}</div>
+          <div className="row">
+            {this.state.initialPhotos.map((element) => {
+              return <Photo key={element.uuid} avatar={element.avatar} />;
+            })}
+          </div>
         </div>
       </div>
     );

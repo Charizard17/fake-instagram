@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import faker from "faker";
-import alertify from "alertifyjs";
 
 let randomName = faker.name.findName();
 let postNumber = faker.random.number();
